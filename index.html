@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="theme-color" content="#f4f1e9">
-<meta name="description" content="Research poster for Kala Ko Ba Uulan?! on entropy-based features and 72-hour meteorological forecast-error prediction.">
+<meta name="description" content="Research poster for Kala Ko Ba Uulan?! on entropy-based features and 72-hour precipitation forecast-error prediction in Quezon City.">
 <title>Kala Ko Ba Uulan?! | Research Poster</title>
 <style>
 @font-face{font-family:LatoLocal;src:url("kala_ko_ba_uulan_assets/Lato-Regular.ttf") format("truetype");font-weight:400;font-display:swap}
@@ -174,147 +174,268 @@ h2{font-size:clamp(1.85rem,3.7vw,3.05rem);line-height:1.02;letter-spacing:-.055e
 
 /* Dark visual identity restored: navy / teal / muted gold */
 :root{
- --paper:#101b2a;
- --white:#17283b;
- --ink:#f3f1eb;
- --green:#123d45;
- --green2:#83c7cc;
- --gold:#d5b56d;
- --gold2:#e6c477;
- --muted:#a5b0bb;
- --line:rgba(235,239,241,.16);
- --pale:#1b3042;
+ --paper:#0b1829;
+ --white:#13264a;
+ --ink:#eef2f7;
+ --green:#13264a;
+ --green2:#5ec2ec;
+ --gold:#f5a83a;
+ --gold2:#f5a83a;
+ --muted:#97abc3;
+ --line:#2a4672;
+ --pale:#183057;
 }
-html,body{background:#101b2a;color:#f3f1eb}
-.masthead,.facts,.refs{background:#101b2a;color:#f3f1eb}
-.masthead{border-color:rgba(235,239,241,.16)}
-.institution{color:#a5b0bb}
-.institution strong{color:#f3f1eb}
-.mast-note{color:#83c7cc}
-.hero{background:#14263a;color:#f3f1eb}
-.hero:after{border-color:rgba(131,199,204,.13);box-shadow:0 0 0 45px rgba(131,199,204,.025),0 0 0 95px rgba(131,199,204,.018)}
-.kicker,.hero-side .label{color:#e6c477}
-.full-title{color:#d1d5d8}
-.hero-side{border-color:rgba(235,239,241,.24);color:#d1d5d8}
-.author{color:#d1d5d8}
+html,body{background:#0b1829;color:#eef2f7}
+.masthead,.facts,.refs{background:#0b1829;color:#eef2f7}
+.masthead{border-color:#2a4672}
+.institution{color:#97abc3}
+.institution strong{color:#eef2f7}
+.mast-note{color:#5ec2ec}
+.hero{background:#0b1829;color:#eef2f7}
+.hero:after{border-color:rgba(94,194,236,.13);box-shadow:0 0 0 45px rgba(94,194,236,.025),0 0 0 95px rgba(94,194,236,.018)}
+.kicker,.hero-side .label{color:#f5a83a}
+.full-title{color:#cfd8e3}
+.hero-side{border-color:rgba(235,239,241,.24);color:#cfd8e3}
+.author{color:#cfd8e3}
 .author strong{color:#fff}
-.facts{border-color:rgba(235,239,241,.16)}
-.fact{border-color:rgba(235,239,241,.16)}
-.fact .lab,.deck,.small,.validation-copy{color:#a5b0bb}
-.fact .val{color:#f3f1eb}
-main section{border-color:rgba(235,239,241,.16)}
-.section-index{color:#83c7cc}
-h2{color:#f3f1eb}
-.question{color:#f3f1eb}
-.gap-note{color:#c4cdd2}
-.gap-note strong{color:#83c7cc}
+.facts{border-color:#2a4672}
+.fact{border-color:#2a4672}
+.fact .lab,.deck,.small,.validation-copy{color:#97abc3}
+.fact .val{color:#eef2f7}
+main section{border-color:#2a4672}
+.section-index{color:#5ec2ec}
+h2{color:#eef2f7}
+.question{color:#eef2f7}
+.gap-note{color:#cfd8e3}
+.gap-note strong{color:#5ec2ec}
 .pipeline,.pipe,.equation,.entropy,.analysis-panel,.split-wrap,.metric{
- background:#17283b;color:#f3f1eb;border-color:rgba(235,239,241,.16)
+ background:#13264a;color:#eef2f7;border-color:#2a4672
 }
-.pipe{border-color:rgba(235,239,241,.16)}
-.pipe h3,.entropy h3,.analysis-panel h3,.boundary h3{color:#f3f1eb}
-.pipe p,.entropy p,.method span,.model-table td:last-child,.boundary p{color:#b7c1c9}
-.pipe .num,.section-index{color:#e6c477}
-.alignment{background:#1b3042;color:#f3f1eb}
-.align-item .tag{color:#83c7cc}
-.align-item strong{color:#f3f1eb}
-.align-arrow{color:#e6c477}
-.equation{background:#17283b;border-color:rgba(235,239,241,.16)}
-.equation .eq-label{color:#a5b0bb}
-.equation .formula{color:#f3f1eb}
-.source-note{background:#202f3e;color:#c5cdd2;border-left-color:#e6c477}
+.pipe{border-color:#2a4672}
+.pipe h3,.entropy h3,.analysis-panel h3,.boundary h3{color:#eef2f7}
+.pipe p,.entropy p,.method span,.model-table td:last-child,.boundary p{color:#cfd8e3}
+.pipe .num,.section-index{color:#f5a83a}
+.alignment{background:#183057;color:#eef2f7}
+.align-item .tag{color:#5ec2ec}
+.align-item strong{color:#eef2f7}
+.align-arrow{color:#f5a83a}
+.equation{background:#13264a;border-color:#2a4672}
+.equation .eq-label{color:#97abc3}
+.equation .formula{color:#eef2f7}
+.source-note{background:#13264a;color:#cfd8e3;border-left-color:#f5a83a}
 .source-note strong{color:#fff}
-.entropy .family,.conventional .family{color:#83c7cc}
-.entropy{background:#17283b}
-.entropy .sub{color:#83c7cc}
-.conventional{background:#123d45;color:#f3f1eb}
-.conventional .family{color:#e6c477}
-.conventional p{color:#d1d5d8}
-.chips span{border-color:rgba(235,239,241,.28);color:#e2e8e9}
-.feature-foot{color:#a5b0bb}
-.analysis-panel{background:#17283b}
-.method{border-color:rgba(235,239,241,.15)}
-.method b{color:#83c7cc}
-.model-table th{color:#a5b0bb}
-.model-table td{border-color:rgba(235,239,241,.15)}
-.model-table td:first-child{color:#83c7cc}
-.incremental{background:#1b3042;color:#d1d5d8}
-.incremental strong{color:#83c7cc}
-.split-wrap{background:#17283b;border-color:rgba(235,239,241,.16)}
-.split-label,.split-legend{color:#a5b0bb}
-.metric{background:#17283b;border-color:rgba(235,239,241,.16)}
-.metric strong{color:#83c7cc}
-.metric span{color:#a5b0bb}
-.validation-note{color:#c5cdd2;border-left-color:#e6c477}
-.boundary article{background:#17283b;border-top-color:#83c7cc}
-.boundary h3{color:#f3f1eb}
-.boundary p{color:#b7c1c9}
-.refs{background:#0d1724;color:#f3f1eb}
-.refs h2{color:#f3f1eb}
-.refs-label,.ref-grid p{color:#a5b0bb}
-.footer{background:#123d45;color:#e0e9e8}
+.entropy .family,.conventional .family{color:#5ec2ec}
+.entropy{background:#13264a}
+.entropy .sub{color:#5ec2ec}
+.conventional{background:#13264a;color:#eef2f7}
+.conventional .family{color:#f5a83a}
+.conventional p{color:#cfd8e3}
+.chips span{border-color:rgba(235,239,241,.28);color:#cfd8e3}
+.feature-foot{color:#97abc3}
+.analysis-panel{background:#13264a}
+.method{border-color:#2a4672}
+.method b{color:#5ec2ec}
+.model-table th{color:#97abc3}
+.model-table td{border-color:#2a4672}
+.model-table td:first-child{color:#5ec2ec}
+.incremental{background:#183057;color:#cfd8e3}
+.incremental strong{color:#5ec2ec}
+.split-wrap{background:#13264a;border-color:#2a4672}
+.split-label,.split-legend{color:#97abc3}
+.metric{background:#13264a;border-color:#2a4672}
+.metric strong{color:#5ec2ec}
+.metric span{color:#97abc3}
+.validation-note{color:#cfd8e3;border-left-color:#f5a83a}
+.boundary article{background:#13264a;border-top-color:#5ec2ec}
+.boundary h3{color:#eef2f7}
+.boundary p{color:#cfd8e3}
+.refs{background:#0a1a32;color:#eef2f7}
+.refs h2{color:#eef2f7}
+.refs-label,.ref-grid p{color:#97abc3}
+.footer{background:#13264a;color:#cfd8e3}
 @media print{
- body{background:#101b2a!important;color:#f3f1eb!important;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+ body{background:#0b1829!important;color:#eef2f7!important;-webkit-print-color-adjust:exact;print-color-adjust:exact}
 }
 
 
-/* Entropy feature section: clearer visual hierarchy and compact method cues */
-#features .section-top{margin-bottom:26px}
-#features .feature-layout{display:grid;grid-template-columns:minmax(0,1.55fr) minmax(245px,.65fr);gap:18px;align-items:stretch}
-#features .entropy-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
-#features .entropy{position:relative;display:grid;grid-template-columns:58px minmax(0,1fr);gap:13px;min-height:148px;padding:17px;background:linear-gradient(145deg,#1a3044 0%,#17283b 72%);border:1px solid rgba(131,199,204,.19);border-radius:12px;overflow:hidden;transition:border-color .2s ease,transform .2s ease,background .2s ease}
-#features .entropy:hover{border-color:rgba(131,199,204,.55);transform:translateY(-2px);background:linear-gradient(145deg,#1d394b 0%,#17283b 72%)}
-#features .entropy:nth-child(5){grid-column:1/-1;min-height:132px}
-#features .entropy .family{font-size:.61rem;letter-spacing:.13em;color:#83c7cc;font-weight:900;text-transform:uppercase;margin:1px 0 5px}
-#features .entropy h3{font-size:1.04rem;line-height:1.12;letter-spacing:-.025em;margin:0 0 7px;color:#f3f1eb}
-#features .entropy p{font-size:.79rem;line-height:1.42;color:#b7c4ce;margin:0}
-#features .entropy .sub{color:#e6c477;font-weight:700}
-#features .entropy-copy{min-width:0;align-self:center}
-#features .entropy-mark{width:54px;height:54px;display:grid;place-items:center;align-self:start;border-radius:11px;background:rgba(131,199,204,.09);border:1px solid rgba(131,199,204,.2);color:#83c7cc}
-#features .entropy-mark svg{width:38px;height:38px;overflow:visible}
-#features .entropy:nth-child(5) .entropy-mark{width:62px;height:62px}
-#features .entropy:nth-child(5) .entropy-mark svg{width:46px;height:46px}
-#features .entropy .parameters{display:flex;flex-wrap:wrap;gap:5px;margin-top:9px}
-#features .entropy .parameters span{font-size:.64rem;font-weight:700;letter-spacing:.015em;color:#e6c477;background:rgba(230,196,119,.08);border:1px solid rgba(230,196,119,.23);padding:3px 7px;border-radius:999px}
-#features .conventional{border-radius:12px;padding:22px 21px;background:linear-gradient(155deg,#164b53 0%,#123d45 70%);border:1px solid rgba(131,199,204,.22);display:flex;flex-direction:column}
-#features .conventional .family{color:#e6c477;font-size:.62rem;letter-spacing:.14em}
-#features .conventional h3{font-size:1.22rem;line-height:1.13;margin:8px 0 17px}
-#features .conventional .chips{gap:7px}
-#features .conventional .chips span{border-radius:6px;padding:6px 8px;font-size:.7rem;background:rgba(255,255,255,.035)}
-#features .conventional p{font-size:.76rem;line-height:1.48;color:#c8d7dc;margin-top:auto;padding-top:20px}
-#features .feature-foot{margin:14px 0 0;padding-left:13px;border-left:2px solid #d5b56d;font-size:.76rem;line-height:1.45;color:#aebbc5}
-#features .feature-foot strong{color:#e6c477}
-@media(max-width:900px){#features .feature-layout{grid-template-columns:1fr}#features .conventional p{margin-top:18px;padding-top:0}}
-@media(max-width:620px){#features .entropy-grid{grid-template-columns:1fr}#features .entropy:nth-child(5){grid-column:auto}#features .entropy{min-height:0;padding:15px;grid-template-columns:48px minmax(0,1fr);gap:11px}#features .entropy-mark{width:46px;height:46px}#features .entropy-mark svg{width:32px;height:32px}#features .entropy:nth-child(5) .entropy-mark{width:46px;height:46px}#features .entropy:nth-child(5) .entropy-mark svg{width:34px;height:34px}}
-@media(prefers-reduced-motion:reduce){#features .entropy{transition:none}#features .entropy:hover{transform:none}}
+/* Feature section: glyph strip grouped by information theory and topology */
+.fx-groups{display:grid;grid-template-columns:4fr 2fr;gap:28px}
+.fx-head{font-size:.68rem;font-weight:900;letter-spacing:.14em;text-transform:uppercase;color:#5ec2ec;padding-bottom:9px;border-bottom:2px solid #5ec2ec;margin-bottom:22px}
+.fx-head em{font-style:normal;font-weight:700;letter-spacing:.04em;text-transform:none;color:#97abc3;margin-left:6px}
+.fx-group.topo .fx-head{color:#f5a83a;border-color:#f5a83a}
+.fx-row{display:grid;gap:22px}
+.fx-group.info .fx-row{grid-template-columns:repeat(4,1fr)}
+.fx-group.topo .fx-row{grid-template-columns:repeat(2,1fr)}
+.fx svg{display:block;width:100%;max-width:150px;height:74px;margin-bottom:14px;overflow:visible}
+.fx h3{margin:0;font-size:1.08rem;font-weight:900;letter-spacing:-.02em;color:#f5a83a}
+.fx h3 sub{font-size:.7em}
+.fx .what{margin:3px 0 0;font-size:.86rem;line-height:1.35;color:#eef2f7}
+.fx .spec{margin:10px 0 0;font-size:.72rem;line-height:1.45;color:#97abc3}
+.fx .spec b{color:#5ec2ec;font-weight:700}
+.fx .cite{margin:8px 0 0;font-size:.66rem;color:#7f93ad}
+.fx-define{margin:30px 0 0;font-size:.95rem;line-height:1.5;color:#cfd8e3}
+.fx-define strong{color:#f5a83a}
+.fx-pills{display:flex;flex-wrap:wrap;gap:10px;margin-top:14px}
+.fx-pills span{font-size:.76rem;padding:6px 14px;border-radius:999px;background:#183057;color:#cfd8e3}
+.fx-pills b{color:#eef2f7}
+.bench{margin-top:26px;display:grid;grid-template-columns:auto 1fr;gap:22px;align-items:center;padding:16px 20px;background:#13264a;border-left:3px solid #5ec2ec}
+.bench .tag{font-size:.64rem;font-weight:900;letter-spacing:.13em;text-transform:uppercase;color:#5ec2ec}
+.bench h3{margin:3px 0 0;font-size:1rem;color:#eef2f7;font-weight:900;letter-spacing:-.02em}
+.bench ul{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:6px 18px;font-size:.82rem;color:#cfd8e3}
+.bench li:not(:last-child):after{content:"·";margin-left:18px;color:#2a4672}
+.bench p{grid-column:1/-1;margin:0;font-size:.74rem;color:#97abc3;line-height:1.45}
+@media(max-width:1000px){.fx-groups{grid-template-columns:1fr}.fx-group.info .fx-row{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:620px){.fx-group.info .fx-row,.fx-group.topo .fx-row{grid-template-columns:1fr 1fr;gap:18px}.bench{grid-template-columns:1fr;gap:10px}}
 
+/* Model matrix: which information each model uses */
+.mx{width:100%;border-collapse:collapse;font-size:.84rem}
+.mx th{font-size:.6rem;font-weight:900;letter-spacing:.1em;text-transform:uppercase;color:#97abc3;padding:0 6px 10px;text-align:center;vertical-align:bottom;line-height:1.25}
+.mx th:first-child,.mx th:nth-child(2){text-align:left;padding-left:0}
+.mx td{padding:10px 6px;border-top:1px solid #2a4672;text-align:center;vertical-align:middle}
+.mx td.k{width:34px;text-align:left;padding-left:0;font-weight:900;color:#f5a83a}
+.mx td.n{text-align:left;color:#eef2f7;line-height:1.3}
+.mx td.n small{display:block;font-size:.7rem;color:#97abc3;margin-top:2px}
+.mx tr.primary td{background:rgba(245,168,58,.07)}
+.mx .on,.mx .off,.mx .sel{display:inline-block;width:12px;height:12px;border-radius:50%}
+.mx .on{background:#5ec2ec}
+.mx tr.primary .on{background:#f5a83a}
+.mx .off{border:1px solid rgba(235,239,241,.2)}
+.mx .sel{border:2px dashed #5ec2ec}
+.mx-key{display:flex;gap:16px;flex-wrap:wrap;margin-top:12px;font-size:.7rem;color:#97abc3}
+.mx-key span{display:inline-flex;align-items:center;gap:6px}
+/* Model table: highlight the primary comparison row */
+.model-table tr.primary td{background:rgba(245,168,58,.06)}
+.model-table tr.primary td:first-child{color:#f5a83a}
+.model-table .role{display:inline-block;margin-left:6px;font-size:.6rem;font-weight:900;letter-spacing:.08em;text-transform:uppercase;color:#f5a83a;border:1px solid rgba(245,168,58,.35);padding:1px 6px;border-radius:999px;vertical-align:1px}
 
-/* Keep the conventional-feature panel content-sized instead of stretching it */
-#features .feature-layout{align-items:start}
-#features .conventional{height:auto;min-height:0;align-self:start;display:block}
-#features .conventional h3{margin:8px 0 14px}
-#features .conventional .chips{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));align-items:start;gap:7px}
-#features .conventional .chips span{display:flex;align-items:center;min-height:34px;width:100%;line-height:1.25}
-#features .conventional p{margin:16px 0 0;padding:12px 0 0;border-top:1px solid rgba(255,255,255,.18);font-size:.73rem}
-@media(max-width:900px){
- #features .feature-layout{align-items:start}
- #features .conventional{width:100%}
- #features .conventional .chips{grid-template-columns:repeat(3,minmax(0,1fr))}
+/* Work plan timeline */
+.plan{display:grid;grid-template-columns:repeat(6,1fr);border:1px solid #2a4672;background:#13264a}
+.plan article{padding:18px 16px 20px;border-right:1px solid #2a4672}
+.plan article:last-child{border-right:0}
+.plan .month{font-size:.66rem;font-weight:900;letter-spacing:.12em;text-transform:uppercase;color:#f5a83a}
+.plan h3{font-size:.92rem;line-height:1.2;margin:9px 0 6px;font-weight:900;letter-spacing:-.02em;color:#eef2f7}
+.plan p{font-size:.76rem;line-height:1.45;color:#cfd8e3;margin:0}
+@media(max-width:900px){.plan{grid-template-columns:repeat(3,1fr)}.plan article:nth-child(3){border-right:0}.plan article:nth-child(-n+3){border-bottom:1px solid #2a4672}}
+@media(max-width:620px){.plan{grid-template-columns:1fr}.plan article{border-right:0;border-bottom:1px solid #2a4672}.plan article:last-child{border-bottom:0}}
+
+/* Palette from the STAT 190 poster: navy, sky blue, orange, teal */
+:root{--green:#2fb5a1;--teal:#2fb5a1}
+h1,h1 .bang{color:#f5a83a}
+.full-title .hl{color:#5ec2ec}
+.hero{background:#0b1829;border-bottom:1px solid #2a4672}
+.hero:after{display:none}
+.masthead,.facts,main section{border-color:#2a4672}
+.fact .val{color:#f5a83a}
+.splitbar span:nth-child(1){background:#2fb5a1}
+.splitbar span:nth-child(2){background:#5ec2ec}
+.splitbar span:nth-child(3){background:#cfd8e3}
+.fx-group.topo .fx-head{color:#2fb5a1;border-color:#2fb5a1}
+.boundary article{border-top-color:#2fb5a1}
+.question em{font-style:normal;color:#f5a83a}
+.footer{background:#13264a}
+
+/* ===== Review pass: navigation, context, objectives, accessibility ===== */
+.skip{position:absolute;left:-9999px;top:0;z-index:50;background:#f5a83a;color:#0b1829;padding:8px 14px;font-weight:700}
+.skip:focus{left:12px;top:12px}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+a:focus-visible{outline:2px solid #f5a83a;outline-offset:3px}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+main section{scroll-margin-top:56px}
+.secnav{position:sticky;top:0;z-index:20;background:rgba(11,24,41,.94);backdrop-filter:blur(6px);border-bottom:1px solid #2a4672}
+.secnav .wrap{display:flex;gap:4px;overflow-x:auto;scrollbar-width:none}
+.secnav .wrap::-webkit-scrollbar{display:none}
+.secnav a{flex:none;padding:13px 12px;font-size:.72rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:#97abc3;text-decoration:none;border-bottom:2px solid transparent}
+.secnav a:first-child{padding-left:0}
+.secnav a:hover{color:#eef2f7}
+.secnav a[aria-current="true"]{color:#f5a83a;border-bottom-color:#f5a83a}
+h1 .tick{margin-left:-.32em}
+.fact-grid{grid-template-columns:repeat(5,1fr)}
+.fact:last-child .val{color:#5ec2ec}
+.section-index .obj{display:block;margin-top:8px;width:max-content;font-size:.6rem;letter-spacing:.08em;text-transform:uppercase;color:#0b1829;background:#5ec2ec;padding:2px 6px;border-radius:3px}
+/* context figures */
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin:0 0 40px;border-top:1px solid #2a4672;border-bottom:1px solid #2a4672}
+.stat{padding:22px 22px 20px;border-right:1px solid #2a4672}
+.stat:first-child{padding-left:0}.stat:last-child{border-right:0}
+.stat strong{display:block;font-size:clamp(2rem,3.4vw,2.8rem);line-height:1;font-weight:900;letter-spacing:-.04em;color:#f5a83a}
+.stat strong span{font-size:.45em;letter-spacing:0;color:#97abc3;font-weight:700}
+.stat p{margin:9px 0 6px;font-size:.88rem;line-height:1.35;color:#eef2f7}
+.stat cite{font-style:normal;font-size:.68rem;color:#7f93ad}
+/* objectives */
+.objs{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(5,1fr);gap:12px;counter-reset:o}
+.objs li{counter-increment:o;display:flex;flex-direction:column;padding:18px 18px 16px;background:#13264a;border-top:3px solid #5ec2ec}
+.objs li:before{content:counter(o);font-size:1.6rem;font-weight:900;line-height:1;color:#f5a83a;margin-bottom:10px}
+.objs b{font-size:1rem;color:#5ec2ec}
+.objs span{font-size:.84rem;line-height:1.42;color:#cfd8e3;margin:4px 0 14px}
+.objs a{margin-top:auto;font-size:.68rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#97abc3;text-decoration:none}
+.objs a:hover{color:#f5a83a}
+/* worked example */
+.align-item small{display:block;margin-top:4px;font-size:.74rem;color:#97abc3;line-height:1.35}
+/* exploratory analysis */
+.eda{margin-top:18px;display:grid;grid-template-columns:200px 1fr;gap:22px;align-items:start;padding:16px 20px;border:1px solid #2a4672}
+.eda-head b{display:block;font-size:.95rem;color:#eef2f7}
+.eda-head span{font-size:.66rem;letter-spacing:.1em;text-transform:uppercase;font-weight:700;color:#5ec2ec}
+.eda ul{margin:0;padding:0;list-style:none;display:grid;grid-template-columns:repeat(2,1fr);gap:6px 24px}
+.eda li{font-size:.82rem;color:#cfd8e3;line-height:1.4;padding-left:14px;position:relative}
+.eda li:before{content:"";position:absolute;left:0;top:.55em;width:6px;height:6px;background:#f5a83a}
+.fx-caption{margin:22px 0 0;font-size:.7rem;color:#7f93ad;font-style:italic}
+.fx-caption + .fx-define{margin-top:8px}
+/* comparisons */
+.cmp{list-style:none;margin:10px 0 12px;padding:0;display:grid;gap:7px}
+.cmp li{display:grid;grid-template-columns:96px 1fr;gap:10px;font-size:.8rem}
+.cmp b{color:#eef2f7}
+.cmp li.lead b{color:#f5a83a}
+.cmp em{font-style:normal;font-size:.62rem;font-weight:900;letter-spacing:.08em;text-transform:uppercase;color:#f5a83a;margin-left:6px}
+.mx-wrap{overflow-x:auto}
+.analysis-grid > *{min-width:0}
+.mx{min-width:470px}
+/* split bar with safeguard gaps */
+.splitbar{gap:4px}
+.split-use{display:flex;gap:4px;margin:-4px 0 10px;font-size:.66rem;color:#97abc3}
+.split-use span{flex:none}
+.gapkey{display:inline-block;width:4px;height:12px;margin-right:6px;border:1px solid #97abc3;vertical-align:-2px}
+.metric.lead{border-color:#f5a83a}
+.metric.lead strong{color:#f5a83a}
+/* implications */
+.sub-head{margin:0 0 14px;font-size:.7rem;font-weight:900;letter-spacing:.13em;text-transform:uppercase;color:#5ec2ec}
+.users{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:34px}
+.users article{padding:18px 18px 16px;background:#13264a;border-left:3px solid #f5a83a}
+.users h3{margin:0 0 6px;font-size:.95rem;color:#eef2f7}
+.users p{margin:0;font-size:.82rem;line-height:1.48;color:#cfd8e3}
+@media(max-width:1000px){
+ .objs{grid-template-columns:repeat(3,1fr)}
+ .stats{grid-template-columns:repeat(2,1fr)}
+ .stat:nth-child(2){border-right:0}.stat:nth-child(-n+2){border-bottom:1px solid #2a4672}.stat:nth-child(3){padding-left:0}
+ .fact-grid{grid-template-columns:repeat(3,1fr)}
+ .fact{border-bottom:1px solid #2a4672}.fact:nth-child(3){border-right:0}.fact:nth-child(4){padding-left:0}
+ .eda{grid-template-columns:1fr;gap:10px}
 }
 @media(max-width:620px){
- #features .conventional .chips{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .objs{grid-template-columns:1fr}
+ .objs li{display:grid;grid-template-columns:32px 1fr;column-gap:10px}
+ .objs li:before{grid-row:1/4;margin:0}
+ .objs span{margin-bottom:8px}
+ .stats{grid-template-columns:1fr 1fr}.stat{padding:16px 12px}.stat:nth-child(odd){padding-left:0}
+ .fact-grid{grid-template-columns:1fr 1fr}.fact:nth-child(3){border-right:1px solid #2a4672}.fact:nth-child(odd){padding-left:0;}.fact:nth-child(even){border-right:0}
+ .eda ul{grid-template-columns:1fr}
+ .users{grid-template-columns:1fr}
+ .cmp li{grid-template-columns:80px 1fr}
+ .split-use{font-size:.6rem}
+ .section-index .obj{font-size:.52rem}
 }
-
+.metric-row{display:grid;grid-template-columns:repeat(3,1fr)}
+@media(max-width:620px){h1 .tick{margin-left:0}.metric-row{grid-template-columns:1fr}}
+@media print{.secnav,.skip{display:none}}
 </style>
 </head>
 <body>
+<a class="skip" href="#main">Skip to content</a>
 <header class="masthead">
  <div class="wrap mast">
   <div class="branding">
-   <img class="instat" src="kala_ko_ba_uulan_assets/instat-logo.png" alt="Institute of Statistics logo">
+   <img class="instat" width="88" height="72" src="kala_ko_ba_uulan_assets/instat-logo.png" alt="Institute of Statistics logo">
    <span class="rule"></span>
-   <img class="seal" src="kala_ko_ba_uulan_assets/cas-seal.png" alt="College of Arts and Sciences seal">
-   <img class="seal" src="kala_ko_ba_uulan_assets/up-seal.png" alt="University of the Philippines seal">
+   <img class="seal" width="65" height="65" src="kala_ko_ba_uulan_assets/cas-seal.png" alt="College of Arts and Sciences seal">
+   <img class="seal" width="65" height="65" src="kala_ko_ba_uulan_assets/up-seal.png" alt="University of the Philippines seal">
    <div class="institution"><strong>University of the Philippines Los Baños</strong>College of Arts and Sciences<br>Institute of Statistics</div>
   </div>
   <div class="mast-note">Special Problem · Proposal</div>
@@ -325,187 +446,341 @@ h2{color:#f3f1eb}
  <div class="wrap hero-inner">
   <div>
    <div class="kicker">Forecast verification · Information theory · Topological data analysis</div>
-   <h1>KALA KO BA<br><span class="bang">UULAN?!</span></h1>
-   <p class="full-title">Autocorrelation-Aware Evaluation of Entropy-Based Feature-Spaces for Anticipating Meteorological Forecast Errors in Philippine Urban Environments, with Emphasis on Approaches from Information Theory and Topological Data Analysis</p>
+   <h1><span class="tick">‘</span>KALA KO BA<br><span class="bang">UULAN?!</span></h1>
+   <p class="full-title"><span class="hl">Autocorrelation-Aware</span> Evaluation of <span class="hl">Entropy-Based Feature-Spaces</span> for Anticipating <span class="hl">Meteorological Forecast Errors</span> in <span class="hl">Philippine Urban Environments</span>, with Emphasis on Approaches from <span class="hl">Information Theory</span> and <span class="hl">Topological Data Analysis</span></p>
    <div class="author"><strong>John Aaron B. Llobrera</strong> &nbsp;·&nbsp; First Semester, A.Y. 2026–2027</div>
   </div>
   <aside class="hero-side">
    <div class="label">The research question</div>
-   <p>Do entropy-based features of recent local weather observations improve predictions of the magnitude of meteorological forecast error?</p>
+   <p>Can entropy features of the past 28 days of rain predict a 72-hour forecast’s error better than conventional features and past errors alone?</p>
   </aside>
  </div>
 </section>
 
 <div class="facts">
  <div class="wrap fact-grid">
-  <div class="fact"><div class="lab">Study location</div><div class="val">Quezon City, Philippines</div></div>
+  <div class="fact"><div class="lab">Study location</div><div class="val">Science Garden, Quezon City</div></div>
   <div class="fact"><div class="lab">Study period</div><div class="val">1 Jan 2022 – 26 Oct 2026</div></div>
-  <div class="fact"><div class="lab">Meteorological variables</div><div class="val">Temperature · Relative humidity · Precipitation</div></div>
+  <div class="fact"><div class="lab">Meteorological variable</div><div class="val">Hourly precipitation (mm)</div></div>
   <div class="fact"><div class="lab">Forecast horizon</div><div class="val">72 hours (3 days)</div></div>
+  <div class="fact"><div class="lab">Stage</div><div class="val">Proposal · no results yet</div></div>
  </div>
 </div>
 
-<main>
+<nav class="secnav" aria-label="Poster sections"><div class="wrap">
+ <a href="#problem">Problem</a><a href="#objectives">Objectives</a><a href="#design">Design</a><a href="#features">Features</a><a href="#analysis">Analysis</a><a href="#validation">Validation</a><a href="#implications">Implications</a><a href="#plan">Work plan</a><a href="#references">References</a>
+</div></nav>
+
+<main id="main">
 <section id="problem">
  <div class="wrap">
-  <div class="section-top"><div class="section-index">01</div><div><h2>From weather history to forecast-error prediction.</h2><p class="deck">Forecast verification is retrospective: the discrepancy is known only when the forecast’s valid-time reference becomes available. This study asks whether the preceding meteorological record contains useful information about that future discrepancy.</p></div></div>
-  <div class="question-grid">
-   <p class="question">The target is not tomorrow’s weather. It is the magnitude of the forecast’s eventual error.</p>
-   <div class="gap-note"><strong>Research gap.</strong> Forecast-error prediction has used ensemble information, atmospheric fields, and previous errors. Whether local observation histories add predictive value through entropy-based and topological representations remains insufficiently established, particularly beyond conventional statistical descriptions.</div>
+  <div class="section-top"><div class="section-index">01</div><div><h2>Forecasts improve, but errors never vanish.</h2><p class="deck">A forecast’s error is known only after the fact, but early action, like the Red Cross typhoon protocol, is decided three days ahead.</p></div></div>
+  <div class="stats">
+   <div class="stat"><strong>#1<span> of 193</span></strong><p>countries by disaster risk</p><cite>WorldRiskReport, 2025</cite></div>
+   <div class="stat"><strong>~20</strong><p>tropical cyclones enter the PAR each year</p><cite>PAGASA, n.d.</cite></div>
+   <div class="stat"><strong>74%</strong><p>of Filipinos exposed to multiple natural hazards</p><cite>World Bank, 2022</cite></div>
+   <div class="stat"><strong>9.3 → 7.9</strong><p>RMSE of PAGASA’s NWP rainfall forecasts, 2015 to 2018</p><cite>Flores, 2019</cite></div>
   </div>
+  <div class="question-grid">
+   <p class="question">The target is not tomorrow’s rain. It is <em>the size of the forecast’s eventual miss</em>.</p>
+   <div class="gap-note"><strong>Research gap.</strong> Forecast errors have been predicted from large-scale circulation (Cahill et al., 2024). Whether local rainfall histories, read through entropy and topology, can do the same is still open.</div>
+  </div>
+ </div>
+</section>
+
+<section id="objectives">
+ <div class="wrap">
+  <div class="section-top"><div class="section-index">02</div><div><h2>Five objectives, one question.</h2></div></div>
+  <ol class="objs">
+   <li><b>Describe</b><span>rainfall and its 72-hour forecast errors, including their autocorrelation</span><a href="#design">Section 03</a></li>
+   <li><b>Extract</b><span>entropy and conventional features from rolling 28-day windows</span><a href="#features">Section 04</a></li>
+   <li><b>Examine</b><span>how the features relate to later errors, allowing for dependence</span><a href="#analysis">Section 05</a></li>
+   <li><b>Develop</b><span>ARIMAX models with different feature sets</span><a href="#analysis">Section 05</a></li>
+   <li><b>Compare</b><span>out-of-sample performance to test entropy’s added value</span><a href="#validation">Section 06</a></li>
+  </ol>
  </div>
 </section>
 
 <section id="design">
  <div class="wrap">
-  <div class="section-top"><div class="section-index">02</div><div><h2>One forecast, one aligned history, one error.</h2><p class="deck">The unit of analysis is an eligible forecast–reference pair for a meteorological variable and valid time. Feature extraction is anchored to forecast initialization, not to the later valid time.</p></div></div>
+  <div class="section-top"><div class="section-index">03<span class="obj">Obj 1</span></div><div><h2>One forecast, one aligned history, one error.</h2><p class="deck">Predictors use only what is known when the forecast is issued.</p></div></div>
   <div class="pipeline">
-   <article class="pipe"><div class="num">01 / OBSERVE</div><h3>Historical record</h3><p>Hourly observations for one variable in Quezon City. The forecast schedule determines eligible initialization times.</p></article>
-   <article class="pipe"><div class="num">02 / WINDOW</div><h3>672-hour history</h3><p>Use the 28-day window ending at initialization time, using only observations already available.</p></article>
-   <article class="pipe"><div class="num">03 / FORECAST</div><h3>72-hour lead</h3><p>Match the archived forecast to its reference value at the valid time, exactly 72 hours after initialization.</p></article>
-   <article class="pipe"><div class="num">04 / RESPONSE</div><h3>Absolute error</h3><p>Retain the pointwise discrepancy as the response for the corresponding forecast record.</p></article>
+   <article class="pipe"><div class="num">01 / OBSERVE</div><h3>Hourly rainfall</h3><p>42,240 hourly totals, Philippine Standard Time.</p></article>
+   <article class="pipe"><div class="num">02 / WINDOW</div><h3>672-hour window</h3><p>28 days ending at origin <i>s</i>. Complete windows only.</p></article>
+   <article class="pipe"><div class="num">03 / FORECAST</div><h3>72-hour forecast</h3><p>Issued at <i>s</i>, valid at <i>s</i> + 72 h. Up to 41,497 origins.</p></article>
+   <article class="pipe"><div class="num">04 / RESPONSE</div><h3>Absolute error</h3><p>The response, after rounding both values to reporting precision.</p></article>
   </div>
-  <div class="alignment">
-   <div class="align-item"><div class="tag">At initialization s</div><strong>672 observed hourly values</strong></div>
-   <div class="align-arrow">→</div>
-   <div class="align-item"><div class="tag">Predict forward</div><strong>Forecast valid at s + 72 h</strong></div>
-   <div class="align-arrow">→</div>
-   <div class="align-item"><div class="tag">At valid time</div><strong>Reference and forecast are paired</strong></div>
+  <div class="alignment" aria-label="Worked example of temporal alignment">
+   <div class="align-item"><div class="tag">Predictors · 672-hour window</div><strong>1 Jan 2022, 13:00 → 29 Jan, 12:00</strong></div>
+   <div class="align-arrow" aria-hidden="true">→</div>
+   <div class="align-item"><div class="tag">Origin s · forecast issued</div><strong>29 Jan 2022, 12:00</strong><small>Latest known error: the 26 Jan forecast</small></div>
+   <div class="align-arrow" aria-hidden="true">→</div>
+   <div class="align-item"><div class="tag">Target · s + 72 h</div><strong>1 Feb 2022, 12:00</strong></div>
   </div>
   <div class="equation">
-   <div><div class="eq-label">Primary response · pointwise absolute forecast error</div><div class="small">Signed error is retained for descriptive analysis of forecast bias.</div></div>
-   <div class="formula">Y<sub>v,t</sub> = | O<sub>v,t</sub> − F<sup>(72)</sup><sub>v,t</sub> |</div>
+   <div><div class="eq-label">Primary response · pointwise absolute forecast error</div><div class="small">Signed error kept to describe bias.</div></div>
+   <div class="formula">Y<sub>t</sub> = | O<sub>t</sub> − F<sup>(72)</sup><sub>t</sub> |</div>
   </div>
-  <div class="source-note"><strong>Data-source hierarchy.</strong> DOST–PAGASA station observations and corresponding archived forecasts will be prioritized. If suitable records are unavailable, Open-Meteo Historical Weather will serve as the reference dataset, while archived JMA GSM Day 3 forecasts retrieved through Previous Runs will serve as the forecast source.</div>
+  <div class="eda">
+   <div class="eda-head"><b>Before modeling</b><span>Exploratory analysis · Objective 1</span></div>
+   <ul><li>Summary statistics, MAE, RMSE</li><li>Signed error for bias</li><li>STL at 24 h and 168 h</li><li>ADF, ACF, PACF</li></ul>
+  </div>
+  <div class="source-note"><strong>Data.</strong> PAGASA Science Garden station first. Fallback: Open-Meteo reference with JMA GSM Day 3 forecasts, read as model-to-model gaps and reported separately.</div>
  </div>
 </section>
 
 <section id="features">
  <div class="wrap">
-  <div class="section-top"><div class="section-index">03</div><div><h2>Feature extraction: five entropy families, one conventional reference set.</h2><p class="deck">All features are computed separately for each meteorological variable from the same 672-observation window. The measures describe different properties; they are not interchangeable indicators of a single “complexity” construct.</p></div></div>
-  <div class="feature-layout">
-   <div class="entropy-grid">
-    <article class="entropy">
-     <div class="entropy-mark" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none"><path d="M6 39H42" stroke="currentColor" stroke-width="1.5" opacity=".55"/><rect x="9" y="25" width="6" height="14" rx="1.5" fill="currentColor" opacity=".45"/><rect x="19" y="16" width="6" height="23" rx="1.5" fill="currentColor" opacity=".72"/><rect x="29" y="9" width="6" height="30" rx="1.5" fill="#e6c477"/><rect x="39" y="20" width="3" height="19" rx="1" fill="currentColor" opacity=".6"/></svg></div>
-     <div class="entropy-copy"><div class="family">01 · Distribution</div><h3>Shannon Entropy</h3><p>How spread out observations are across quantile-based categories. Precipitation zeros are kept as a separate category.</p></div>
-    </article>
-    <article class="entropy">
-     <div class="entropy-mark" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none"><path d="M5 29C10 29 10 13 16 13S22 35 28 35 34 19 43 19" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/><path d="M5 37H43" stroke="currentColor" stroke-width="1.2" opacity=".35"/><circle cx="16" cy="13" r="3" fill="#e6c477"/><circle cx="28" cy="35" r="3" fill="#e6c477"/></svg></div>
-     <div class="entropy-copy"><div class="family">02 · Recurrence</div><h3>Sample Entropy</h3><p>How often similar sequences remain similar as their length increases.</p><div class="parameters"><span>m = 2</span><span>r = 0.2 × SD</span></div></div>
-    </article>
-    <article class="entropy">
-     <div class="entropy-mark" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none"><path d="M7 35L16 15L25 27L34 9L42 35" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" opacity=".7"/><circle cx="7" cy="35" r="3" fill="#e6c477"/><circle cx="16" cy="15" r="3" fill="currentColor"/><circle cx="25" cy="27" r="3" fill="#e6c477"/><circle cx="34" cy="9" r="3" fill="currentColor"/><circle cx="42" cy="35" r="3" fill="#e6c477"/></svg></div>
-     <div class="entropy-copy"><div class="family">03 · Ordinal structure</div><h3>Permutation Entropy</h3><p>How diverse the order patterns are across short sequences. Tied precipitation values are fractionally allocated.</p><div class="parameters"><span>m = 3</span><span>τ = 1</span></div></div>
-    </article>
-    <article class="entropy">
-     <div class="entropy-mark" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none"><path d="M6 39H43" stroke="currentColor" stroke-width="1.2" opacity=".4"/><path d="M7 36C12 35 14 31 18 24S25 10 30 14 37 26 42 7" stroke="#e6c477" stroke-width="2" stroke-linecap="round"/><path d="M7 36C12 35 14 31 18 24S25 10 30 14 37 26 42 7V39H7Z" fill="currentColor" opacity=".12"/></svg></div>
-     <div class="entropy-copy"><div class="family">04 · Frequency domain</div><h3>Spectral Entropy</h3><p>How evenly spectral power is distributed across frequencies, estimated using Welch’s method.</p><div class="parameters"><span>Segment: 336</span><span>Overlap: 168</span></div></div>
-    </article>
-    <article class="entropy">
-     <div class="entropy-mark" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none"><path d="M8 10C15 4 24 7 26 15S20 25 13 22 5 15 8 10Z" stroke="currentColor" stroke-width="1.6"/><path d="M25 29C28 20 40 20 42 29S35 42 28 39 23 34 25 29Z" stroke="#e6c477" stroke-width="1.8"/><path d="M12 33C16 28 21 28 25 31" stroke="currentColor" stroke-width="1.4" stroke-dasharray="2.5 3" opacity=".7"/><circle cx="17" cy="14" r="2" fill="#e6c477"/><circle cx="34" cy="31" r="2" fill="currentColor"/></svg></div>
-     <div class="entropy-copy"><div class="family">05 · Topological structure</div><h3>Persistent Entropy <span class="sub">H₀ and H₁</span></h3><p>Summarizes the distribution of persistence lifetimes: connected components (H₀) and loops (H₁) in the delay-embedded series.</p><div class="parameters"><span>Embedding: m = 3</span><span>Delay: τ = 6</span><span>660 points · 3D</span></div></div>
-    </article>
+  <div class="section-top"><div class="section-index">04<span class="obj">Obj 2</span></div><div><h2>Five entropy measures, six features.</h2><p class="deck">All from the same 672-hour window. Each captures a different property; they are not interchangeable.</p></div></div>
+
+  <div class="fx-groups">
+   <div class="fx-group info">
+    <div class="fx-head">Information theory <em>how irregular is the rainfall record?</em></div>
+    <div class="fx-row">
+     <article class="fx">
+      <svg viewBox="0 0 150 74" aria-hidden="true">
+       <line x1="0" y1="72" x2="150" y2="72" stroke="#2a4672" stroke-width="1.5"/>
+       <rect x="4" y="10" width="16" height="62" fill="#f5a83a"/>
+       <rect x="28" y="40" width="12" height="32" fill="#5ec2ec"/><rect x="44" y="28" width="12" height="44" fill="#5ec2ec"/>
+       <rect x="60" y="22" width="12" height="50" fill="#5ec2ec"/><rect x="76" y="34" width="12" height="38" fill="#5ec2ec"/>
+       <rect x="92" y="44" width="12" height="28" fill="#5ec2ec"/><rect x="108" y="52" width="12" height="20" fill="#5ec2ec"/>
+       <rect x="124" y="60" width="12" height="12" fill="#5ec2ec"/>
+       <text x="12" y="6" font-size="8" fill="#97abc3" text-anchor="middle">dry</text>
+      </svg>
+      <h3>Shannon</h3>
+      <p class="what">how spread out rainfall amounts are</p>
+      <p class="spec">Dry hours + 9 log-scale quantile bins, fixed from <b>training data</b></p>
+      <p class="cite">Shannon, 1948</p>
+     </article>
+     <article class="fx">
+      <svg viewBox="0 0 150 74" aria-hidden="true">
+       <rect x="6" y="8" width="54" height="58" fill="none" stroke="#f5a83a" stroke-width="2"/>
+       <rect x="86" y="8" width="54" height="58" fill="none" stroke="#f5a83a" stroke-width="2" stroke-dasharray="4 3"/>
+       <path d="M10 54 L22 18 L34 54 L46 18 L58 54 M90 54 L102 18 L114 54 L126 18 L138 54" fill="none" stroke="#5ec2ec" stroke-width="2.4" stroke-linejoin="round"/>
+       <path d="M64 37 H82" stroke="#97abc3" stroke-width="1.5" marker-end="url(#ah)"/>
+       <defs><marker id="ah" viewBox="0 0 6 6" refX="5" refY="3" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0 L6 3 L0 6Z" fill="#97abc3"/></marker></defs>
+      </svg>
+      <h3>Sample</h3>
+      <p class="what">whether recurring sequences stay similar</p>
+      <p class="spec"><b>m = 2</b>, <b>r = 0.2 × SD</b>; unavailable if no matches</p>
+      <p class="cite">Richman &amp; Moorman, 2000</p>
+     </article>
+     <article class="fx">
+      <svg viewBox="0 0 150 74" aria-hidden="true">
+       <path d="M6 46 L22 26 L38 14" fill="none" stroke="#5ec2ec" stroke-width="2.6" stroke-linecap="round"/>
+       <path d="M56 40 L72 14 L88 40" fill="none" stroke="#5ec2ec" stroke-width="2.6" stroke-linecap="round"/>
+       <path d="M106 14 L122 40 L138 22" fill="none" stroke="#5ec2ec" stroke-width="2.6" stroke-linecap="round"/>
+       <rect x="10" y="56" width="24" height="16" fill="#f5a83a"/>
+       <rect x="62" y="64" width="20" height="8" fill="#f5a83a"/>
+       <rect x="110" y="52" width="24" height="20" fill="#f5a83a"/>
+      </svg>
+      <h3>Permutation</h3>
+      <p class="what">how diverse the ordering patterns are</p>
+      <p class="spec"><b>m = 3</b>, <b>τ = 1</b>, 6 patterns; ties split fractionally</p>
+      <p class="cite">Bandt &amp; Pompe, 2002</p>
+     </article>
+     <article class="fx">
+      <svg viewBox="0 0 150 74" aria-hidden="true">
+       <line x1="0" y1="66" x2="150" y2="66" stroke="#2a4672" stroke-width="1.5"/>
+       <path d="M2 60 L20 58 L30 56 L36 10 L42 56 L70 58 L78 34 L84 58 L110 61 L148 63" fill="none" stroke="#5ec2ec" stroke-width="2.2" stroke-linejoin="round"/>
+       <text x="36" y="6" font-size="9" fill="#f5a83a" text-anchor="middle">24 h</text>
+       <text x="78" y="29" font-size="9" fill="#f5a83a" text-anchor="middle">12 h</text>
+      </svg>
+      <h3>Spectral</h3>
+      <p class="what">how power spreads across frequencies</p>
+      <p class="spec">Welch, Hann window; <b>segment 336</b>, <b>overlap 168</b></p>
+      <p class="cite">Inouye et al., 1991</p>
+     </article>
+    </div>
    </div>
-   <aside class="conventional">
-    <div class="family">Baseline for comparison</div><h3>Conventional statistical features</h3>
-    <div class="chips"><span>Mean</span><span>Standard deviation</span><span>Absolute trend slope</span><span>ACF lag 1</span><span>ACF lag 24</span><span>ACF lag 168</span><span>Zero proportion*</span></div>
-    <p>*Zero-observation proportion is used for precipitation as an intermittency descriptor; it is omitted or treated as inapplicable for temperature and relative humidity.</p>
-   </aside>
+
+   <div class="fx-group topo">
+    <div class="fx-head">Topology <em>what shapes persist?</em></div>
+    <div class="fx-row">
+     <article class="fx">
+      <svg viewBox="0 0 150 74" aria-hidden="true">
+       <g fill="#5ec2ec"><circle cx="8" cy="20" r="4"/><circle cx="22" cy="12" r="4"/><circle cx="16" cy="40" r="4"/><circle cx="34" cy="52" r="4"/><circle cx="48" cy="38" r="4"/></g>
+       <path d="M60 37 H76" stroke="#97abc3" stroke-width="1.5" marker-end="url(#ah)"/>
+       <path d="M92 20 L108 12 L102 40 L120 52 L134 38" fill="none" stroke="#f5a83a" stroke-width="2"/>
+       <g fill="#f5a83a"><circle cx="92" cy="20" r="4"/><circle cx="108" cy="12" r="4"/><circle cx="102" cy="40" r="4"/><circle cx="120" cy="52" r="4"/><circle cx="134" cy="38" r="4"/></g>
+      </svg>
+      <h3>Persistent H<sub>0</sub></h3>
+      <p class="what">separate pieces merge</p>
+      <p class="spec">Delay embedding <b>m = 3</b>, <b>τ = 6</b>: 660 points in 3D</p>
+      <p class="cite">Chintakunta et al., 2015</p>
+     </article>
+     <article class="fx">
+      <svg viewBox="0 0 150 74" aria-hidden="true">
+       <g fill="none" stroke="#5ec2ec" stroke-width="2"><polygon points="30,8 50,18 54,42 36,60 14,54 6,30"/></g>
+       <g fill="#5ec2ec"><circle cx="30" cy="8" r="4"/><circle cx="50" cy="18" r="4"/><circle cx="54" cy="42" r="4"/><circle cx="36" cy="60" r="4"/><circle cx="14" cy="54" r="4"/><circle cx="6" cy="30" r="4"/></g>
+       <path d="M66 37 H82" stroke="#97abc3" stroke-width="1.5" marker-end="url(#ah)"/>
+       <circle cx="116" cy="35" r="26" fill="#f5a83a"/>
+       <g fill="#eef2f7"><circle cx="116" cy="9" r="4"/><circle cx="141" cy="27" r="4"/><circle cx="134" cy="56" r="4"/><circle cx="98" cy="56" r="4"/><circle cx="91" cy="27" r="4"/></g>
+      </svg>
+      <h3>Persistent H<sub>1</sub></h3>
+      <p class="what">loops form, then fill in</p>
+      <p class="spec">Vietoris–Rips filtration on log-transformed, standardized rainfall</p>
+      <p class="cite">Chintakunta et al., 2015</p>
+     </article>
+    </div>
+   </div>
   </div>
-  <p class="feature-foot"><strong>Comparability matters.</strong> Training-derived discretization and scaling parameters are carried forward unchanged to validation and testing. Persistent Entropy is exploratory; its additional predictive value is tested, not presumed.</p>
+
+  <p class="fx-caption">Icons are schematic illustrations, not study data.</p>
+  <p class="fx-define"><strong>Persistent Entropy</strong> = how evenly the lifetimes of those pieces and loops are spread as the distance scale grows.</p>
+  <div class="fx-pills">
+   <span><b>Hypothesized ↑ with error:</b> Shannon · Sample · Permutation · Spectral</span>
+   <span><b>Exploratory, no direction assumed:</b> Persistent H₀, H₁</span>
+  </div>
+
+  <div class="bench">
+   <div><div class="tag">Benchmark · Model A</div><h3>Conventional features</h3></div>
+   <ul><li>Mean</li><li>Standard deviation</li><li>Absolute trend slope</li><li>ACF lag 1</li><li>ACF lag 24</li><li>ACF lag 168</li><li>Proportion of dry hours</li></ul>
+   <p>Entropy is judged by what it adds to this set. Bins and scaling come from training data only.</p>
+  </div>
  </div>
 </section>
 
+
 <section id="analysis">
  <div class="wrap">
-  <div class="section-top"><div class="section-index">04</div><div><h2>Association first. Predictive comparison second.</h2><p class="deck">Separate analyses are conducted for temperature, relative humidity, and precipitation. The central evidence is out-of-sample predictive performance, not the apparent significance or size of an individual coefficient.</p></div></div>
+  <div class="section-top"><div class="section-index">05<span class="obj">Obj 3–4</span></div><div><h2>Association describes. Prediction decides.</h2></div></div>
   <div class="analysis-grid">
    <article class="analysis-panel">
     <h3>Association analysis</h3>
     <div class="method-list">
-     <div class="method"><b>Spearman ρ</b><span>Direction and strength of monotonic association.</span></div>
-     <div class="method"><b>Distance correlation</b><span>Broader dependence, including nonlinear or non-monotonic relationships.</span></div>
-     <div class="method"><b>Partial rank</b><span>Entropy–error association after controlling for conventional statistical features.</span></div>
-     <div class="method"><b>Inference</b><span>Autocorrelation-adjusted inference where assumptions permit; moving-block bootstrap for distance-correlation uncertainty; Benjamini–Hochberg FDR control for Spearman tests.</span></div>
+     <div class="method"><b>Spearman ρ</b><span>Monotonic link; autocorrelation-adjusted test (Lun et al., 2023)</span></div>
+     <div class="method"><b>Distance correlation</b><span>Any dependence, including nonlinear; bootstrap intervals</span></div>
+     <div class="method"><b>Partial rank</b><span>Entropy–error link after controlling for conventional features</span></div>
+     <div class="method"><b>Multiplicity</b><span>Benjamini–Hochberg, 5% FDR</span></div>
     </div>
    </article>
    <article class="analysis-panel">
-    <h3>Predictive configurations</h3>
-    <table class="model-table">
-     <thead><tr><th>Model</th><th>Predictor specification</th></tr></thead>
+    <h3>Candidate models</h3>
+    <div class="mx-wrap"><table class="mx">
+     <thead><tr><th scope="col"><span class="sr">Label</span></th><th scope="col">Model</th><th scope="col">Past<br>errors</th><th scope="col">Conven&shy;tional</th><th scope="col">Classical<br>entropy</th><th scope="col">Persistent<br>entropy</th></tr></thead>
      <tbody>
-      <tr><td>Baseline</td><td>ARIMA; no exogenous predictors.</td></tr>
-      <tr><td>A · Individual</td><td>Separate models for each entropy family.</td></tr>
-      <tr><td>B · Entropy</td><td>All entropy-based features entered together.</td></tr>
-      <tr><td>C · Combined</td><td>Entropy-based and conventional statistical features.</td></tr>
-      <tr><td>D · Stepwise</td><td>Stepwise selection among all candidate features.</td></tr>
+      <tr><td class="k">—</td><td class="n">Baseline ARIMA</td><td><i class="on" role="img" aria-label="included"></i></td><td><i class="off" role="img" aria-label="not included"></i></td><td><i class="off" role="img" aria-label="not included"></i></td><td><i class="off" role="img" aria-label="not included"></i></td></tr>
+      <tr><td class="k">A</td><td class="n">Conventional only</td><td><i class="on" role="img" aria-label="included"></i></td><td><i class="on" role="img" aria-label="included"></i></td><td><i class="off" role="img" aria-label="not included"></i></td><td><i class="off" role="img" aria-label="not included"></i></td></tr>
+      <tr class="primary"><td class="k">B</td><td class="n">Conventional + entropy<small>Primary test: B vs A</small></td><td><i class="on" role="img" aria-label="included"></i></td><td><i class="on" role="img" aria-label="included"></i></td><td><i class="on" role="img" aria-label="included"></i></td><td><i class="on" role="img" aria-label="included"></i></td></tr>
+      <tr><td class="k">B′</td><td class="n">B without Persistent Entropy<small>Topology test: B vs B′</small></td><td><i class="on" role="img" aria-label="included"></i></td><td><i class="on" role="img" aria-label="included"></i></td><td><i class="on" role="img" aria-label="included"></i></td><td><i class="off" role="img" aria-label="not included"></i></td></tr>
+      <tr><td class="k">C</td><td class="n">Stepwise selection (AICc)<small>Secondary</small></td><td><i class="on" role="img" aria-label="included"></i></td><td><i class="sel" role="img" aria-label="eligible for stepwise selection"></i></td><td><i class="sel" role="img" aria-label="eligible for stepwise selection"></i></td><td><i class="sel" role="img" aria-label="eligible for stepwise selection"></i></td></tr>
      </tbody>
-    </table>
-    <div class="incremental"><strong>Topological contribution test:</strong> compare Model C with an otherwise identical configuration excluding Persistent Entropy. Paired test-set performance differences are assessed using moving-block bootstrap.</div>
+    </table></div>
+    <div class="mx-key"><span><i class="on" style="width:10px;height:10px;border-radius:50%;background:#5ec2ec;display:inline-block"></i>included</span><span><i style="width:10px;height:10px;border-radius:50%;border:2px dashed #5ec2ec;display:inline-block"></i>eligible for stepwise selection</span></div>
+    <div class="incremental"><strong>Comparisons (test MAE)</strong>
+     <ul class="cmp">
+      <li class="lead"><b>B vs A</b><span>Entropy beyond conventional <em>Primary</em></span></li>
+      <li><b>B vs B′</b><span>Topology beyond classical entropy</span></li>
+      <li><b>A vs Baseline</b><span>Conventional beyond past errors</span></li>
+      <li><b>C vs A</b><span>What selection keeps</span></li>
+     </ul>
+     Block-bootstrap 95% intervals; 2,000 replicates, 168-hour blocks.</div>
    </article>
   </div>
-  <div class="source-note"><strong>Primary model:</strong> dynamic regression with ARIMA errors (ARIMAX). The regression component uses historical features; the ARIMA error component accounts for remaining temporal dependence in the absolute-error series. No future observations or unverified forecast errors may enter a prediction.</div>
+  <div class="source-note"><strong>Model:</strong> regression with ARIMA errors, plus Fourier terms if daily or annual cycles appear. Response on the raw or log(1 + Y) scale. Only errors already observed at <i>s</i> are used.</div>
  </div>
 </section>
 
 <section id="validation">
  <div class="wrap">
-  <div class="section-top"><div class="section-index">05</div><div><h2>Chronological validation protects the forecast origin.</h2><p class="deck">The evaluation design reflects the information that would actually be available when each forecast-error prediction is made.</p></div></div>
+  <div class="section-top"><div class="section-index">06<span class="obj">Obj 5</span></div><div><h2>Train on the past, test on the future.</h2></div></div>
   <div class="validation">
    <div>
     <div class="split-wrap">
-     <div class="split-label"><span>Earlier records</span><span>Later records</span></div>
-     <div class="splitbar"><span></span><span></span><span></span></div>
+     <div class="split-label"><span>Earlier origins</span><span>Later origins</span></div>
+     <div class="splitbar" role="img" aria-label="Chronological split: training 60 percent, validation 20 percent, testing 20 percent, separated by 72-hour safeguards"><span></span><span></span><span></span></div>
+     <div class="split-use"><span style="width:60%">fit</span><span style="width:20%">choose settings</span><span style="width:20%">final test, once</span></div>
      <div class="split-legend">
-      <span><i class="dot" style="background:var(--green)"></i>Training 60%</span>
-      <span><i class="dot" style="background:#8eaa9a"></i>Validation 20%</span>
-      <span><i class="dot" style="background:var(--gold)"></i>Testing 20%</span>
+      <span><i class="dot" style="background:#2fb5a1"></i>Training 60%</span>
+      <span><i class="dot" style="background:#5ec2ec"></i>Validation 20%</span>
+      <span><i class="dot" style="background:#cfd8e3"></i>Testing 20%</span>
+      <span><i class="gapkey"></i>72-hour safeguard</span>
      </div>
-     <p class="validation-copy">Chronological partitioning; not random cross-validation. A 72-hour boundary safeguard prevents forecast errors that have not yet become observable from entering the preceding partition.</p>
+     <p class="validation-copy">No random splits. A 72-hour gap at each boundary keeps unobserved errors out.</p>
     </div>
-    <div class="validation-note">Scaling, transformations, ARIMA order selection, and model fitting use training data only. Validation guides configuration and alternative-model decisions; testing is reserved for final evaluation.</div>
+    <div class="validation-note">Settings are chosen on validation. Final models are tested once, coefficients fixed.</div>
    </div>
    <div>
     <div class="eq-label">Out-of-sample performance metrics</div>
     <div class="metric-row">
-     <div class="metric"><strong>MAE</strong><span>Average absolute error</span></div>
+     <div class="metric lead"><strong>MAE</strong><span>Basis of model comparison</span></div>
      <div class="metric"><strong>RMSE</strong><span>Penalizes large misses</span></div>
-     <div class="metric"><strong>R²</strong><span>Test-set variation</span></div>
+     <div class="metric"><strong>R²</strong><span>Share of test variance explained</span></div>
     </div>
-    <p class="validation-copy">All metrics are computed on the original absolute-error scale. Negative test-set R² values are retained when predictions perform worse than the test-set mean reference.</p>
+    <p class="validation-copy">Test set, original error scale. Negative R² is reported as is.</p>
+    <p class="validation-copy">Residual checks: Ljung–Box, ARCH-LM, Jarque–Bera.</p>
    </div>
   </div>
  </div>
 </section>
 
-<section id="scope">
+<section id="implications">
  <div class="wrap">
-  <div class="section-top"><div class="section-index">06</div><div><h2>Interpretation stays within the study’s boundaries.</h2><p class="deck">The study evaluates predictive usefulness under a specified data pathway and forecast horizon. It does not claim to explain the physical causes of forecast errors.</p></div></div>
-  <div class="boundary">
-   <article><h3>One place, three variables</h3><p>Quezon City; near-surface air temperature, relative humidity, and precipitation. Results are not automatically generalizable to other locations or forecasting systems.</p></article>
-   <article><h3>Actual forecast schedule</h3><p>Hourly observations do not imply hourly forecast issuance. Eligible forecast origins follow the archived product’s actual initialization and valid-time structure.</p></article>
-   <article><h3>Dependence and measurement</h3><p>Overlapping 28-day windows and serially dependent errors remain relevant. Entropy estimates depend on discretization, embedding, spectral, and topological specifications.</p></article>
+  <div class="section-top"><div class="section-index">07</div><div><h2>What it could mean, and where it stops.</h2><p class="deck">A complement to forecasts, not a replacement. No results yet.</p></div></div>
+  <h3 class="sub-head">Who could use it</h3>
+  <div class="users">
+   <article><h3>Meteorological agencies</h3><p>Flag forecasts likely to miss badly.</p></article>
+   <article><h3>DRRM practitioners</h3><p>Weigh forecast reliability in anticipatory action.</p></article>
+   <article><h3>Weather-dependent planning</h3><p>Plan around expected forecast misses.</p></article>
   </div>
+  <h3 class="sub-head">Where the conclusions stop</h3>
+  <div class="boundary">
+   <article><h3>One point, one variable, one lead time</h3><p>Quezon City rainfall, one model, 72 hours. May not generalize.</p></article>
+   <article><h3>The reference shapes the error</h3><p>Station data give true errors; Open-Meteo gives model-to-model gaps.</p></article>
+   <article><h3>Dependence and measurement</h3><p>Overlapping windows are dependent; entropy values depend on their settings.</p></article>
+  </div>
+ </div>
+</section>
+
+<section id="plan">
+ <div class="wrap">
+  <div class="section-top"><div class="section-index">08</div><div><h2>Six months, with a fallback built in.</h2><p class="deck">December 2026 to May 2027.</p></div></div>
+  <div class="plan">
+   <article><div class="month">Dec 2026</div><h3>Acquire data</h3><p>PAGASA request; Open-Meteo backup</p></article>
+   <article><div class="month">Jan 2027</div><h3>Match and explore</h3><p>Pairing, missingness, EDA</p></article>
+   <article><div class="month">Feb 2027</div><h3>Extract features</h3><p>Code, verify, time features</p></article>
+   <article><div class="month">Mar 2027</div><h3>Associate and fit</h3><p>Associations; model fitting</p></article>
+   <article><div class="month">Apr 2027</div><h3>Test</h3><p>Test set, bootstrap, diagnostics</p></article>
+   <article><div class="month">May 2027</div><h3>Write</h3><p>Write-up; final presentation</p></article>
+  </div>
+  <div class="source-note"><strong>Fallback.</strong> Model C goes first if time runs short. Persistent Entropy goes if not computable by February 2027 or undefined in over 10% of training windows. The core B-vs-A test stays.</div>
  </div>
 </section>
 </main>
 
-<section class="refs">
+<section class="refs" id="references">
  <div class="wrap">
   <div class="refs-head"><h2>Selected references</h2><div class="refs-label">Foundational and methodological sources</div></div>
   <div class="ref-grid">
    <p>Atienza, N., González-Díaz, R., &amp; Soriano-Trigueros, M. (2020). On the stability of persistent entropy and new summary functions for topological data analysis. <em>Pattern Recognition, 107</em>, Article 107509.</p>
    <p>Bandt, C., &amp; Pompe, B. (2002). Permutation entropy: A natural complexity measure for time series. <em>Physical Review Letters, 88</em>(17), Article 174102.</p>
-   <p>Ben Bouallègue, Z., et al. (2023). Statistical modeling of 2-m temperature and 10-m wind speed forecast errors. <em>Monthly Weather Review, 151</em>(4), 897–911.</p>
+   <p>Cahill, J., et al. (2024). Errors of opportunity: Using neural networks to predict errors in the Global Ensemble Forecast System (GEFS) on S2S time scales. <em>Weather and Forecasting, 39</em>(12), 1817–1831.</p>
    <p>Chintakunta, H., et al. (2015). An entropy-based persistence barcode. <em>Pattern Recognition, 48</em>(2), 391–401.</p>
    <p>Hyndman, R. J., &amp; Athanasopoulos, G. (2021). <em>Forecasting: Principles and Practice</em> (3rd ed.). OTexts.</p>
+   <p>Inouye, T., et al. (1991). Quantification of EEG irregularity by use of the entropy of the power spectrum. <em>Electroencephalography and Clinical Neurophysiology, 79</em>(3), 204–210.</p>
    <p>Richman, J. S., &amp; Moorman, J. R. (2000). Physiological time-series analysis using approximate entropy and sample entropy. <em>American Journal of Physiology–Heart and Circulatory Physiology, 278</em>(6), H2039–H2049.</p>
    <p>Shannon, C. E. (1948). A mathematical theory of communication. <em>Bell System Technical Journal, 27</em>(3), 379–423.</p>
    <p>Székely, G. J., Rizzo, M. L., &amp; Bakirov, N. K. (2007). Measuring and testing dependence by correlation of distances. <em>The Annals of Statistics, 35</em>(6), 2769–2794.</p>
-   <p>Tashman, L. J. (2000). Out-of-sample tests of forecasting accuracy: An analysis and review. <em>International Journal of Forecasting, 16</em>(4), 437–450.</p>
   </div>
  </div>
 </section>
 <footer class="footer"><div class="wrap"><span>‘KALA KO BA UULAN?! · Special Problem Research Proposal</span><span>Institute of Statistics · UPLB</span></div></footer>
+<script>
+(() => {
+  const links = [...document.querySelectorAll('.secnav a')];
+  const byId = new Map(links.map(a => [a.hash.slice(1), a]));
+  if (!('IntersectionObserver' in window)) return;
+  const io = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (!e.isIntersecting) return;
+      links.forEach(a => a.removeAttribute('aria-current'));
+      const a = byId.get(e.target.id);
+      if (a) { a.setAttribute('aria-current', 'true'); a.scrollIntoView({block: 'nearest', inline: 'nearest'}); }
+    });
+  }, {rootMargin: '-45% 0px -50% 0px'});
+  byId.forEach((_, id) => { const el = document.getElementById(id); if (el) io.observe(el); });
+})();
+</script>
 </body>
 </html>
